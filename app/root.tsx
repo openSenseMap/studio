@@ -7,7 +7,9 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
+import { Footer } from "./components/footer";
 import { NavBar } from "./components/navbar";
+import { Spacer } from "./components/spacer";
 
 import tailwindStyles from "./styles/tailwind.css";
 
@@ -31,6 +33,8 @@ export default function App() {
       <body className="bg-white transition duration-500 dark:bg-gray-900">
         <NavBar />
         <Outlet />
+        <Spacer size="base" />
+        <Footer />
         <ScrollRestoration />
         <Scripts />
         <LiveReload />
